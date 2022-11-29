@@ -102,10 +102,10 @@ RUN apt-get clean -y
 RUN mkdir /notebooks
 WORKDIR /notebooks
 
-RUN conda install -I jinja2 >=3.1.1 
-RUN conda install --upgrade nbdev nbconvert jupyter jupyterlab
-RUN conda install --upgrade ipywidgets
-RUN conda install --upgrade jupyter_contrib_nbextensions jupyterlab-git
+# RUN conda install -I jinja2 >=3.1.1 
+# RUN conda install --upgrade nbdev nbconvert jupyter jupyterlab
+# RUN conda install --upgrade ipywidgets
+# RUN conda install --upgrade jupyter_contrib_nbextensions jupyterlab-git
 
 COPY run.sh /run.sh
 CMD ["/run.sh"]
